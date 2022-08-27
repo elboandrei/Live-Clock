@@ -19,3 +19,16 @@ function Clock() {
 
     var t = setTimeout(Clock, 500);
 }
+
+const btnAdd = document.getElementById("add-button");
+
+
+
+function addClock() {
+    var newDiv = document.createElement("div");
+
+    newDiv.classList.add("clock-card");
+
+    var clocksDiv = document.getElementById("clocks-container");
+    clocksDiv.appendChild(newDiv);
+}

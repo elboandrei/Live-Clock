@@ -1,38 +1,68 @@
-html, body {
+* {
+    padding: 0;
     margin: 0;
-    width: 100%;
-    background: whitesmoke;
-}
-.main-container {
-    width: 90%;
-    height: 780px;
-    position: relative;
-    margin: 5em;
-    text-align: center;
-
-    background: whitesmoke;
-    border-radius: 100px;
-    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.6),
-        10px 10px 50px rgba(0, 0, 0, 0.3)
-
 }
 
-
-h1 {
+body {
     width: 100%;
-    font-size: 8vw;
-    position: absolute;
-    color: whitesmoke;
-    text-shadow: -8px -8px 12px rgba(255, 255, 255, 0.5),
-        8px 8px 12px rgba(44, 52, 56, 0.2)
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8ecf2;
 }
 
-#clock {
-    position: absolute;
-    width: 100%;
-    font-size: 9vw;
-    margin-top: 20%;
-    color: whitesmoke;
-    text-shadow: -8px -8px 12px rgba(255, 255, 255, 0.5),
-        8px 8px 12px rgba(44, 52, 56, 0.2)
+.container {
+    margin: auto;
+    align-items: center;
+    padding-top: 2em;
+}
+
+#add-button {
+    background: #e8ecf2;
+    color: #73787d;
+    border-radius: 9999px;
+    border: none;
+    transition: all;
+    height: 50px;
+    width: 175px;
+    transition-duration: 250px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+        5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+#add-button:hover {
+    color: black;
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.6),
+        1px 1px 5px rgba(0, 0, 0, 0.3),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.6),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.30);
+}
+
+.clock-card {
+    width: 180px;
+    height: 180px;
+    color: #73787d;
+    background: #e8ecf2;
+    display: inline-block;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+        5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin: 5px;
+}
+
+
+.clock-card:hover {
+    color: black;
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.6),
+        1px 1px 5px rgba(0, 0, 0, 0.3),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.6),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.30);
+}
+#clocks-container {
+    margin-top: 50px;
 }
