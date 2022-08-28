@@ -16,19 +16,22 @@ body {
     margin: auto;
     align-items: center;
     padding-top: 2em;
+    position: relative;
+    width: 80%;
 }
 
 #add-button {
     background: #e8ecf2;
+    margin-bottom: 2em;
+    margin-left: 38.5%;
     color: #73787d;
     border-radius: 9999px;
     border: none;
     transition: all;
     height: 50px;
     width: 175px;
-    transition-duration: 250px;
-    display: flex;
     cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
@@ -48,14 +51,24 @@ body {
     height: 180px;
     color: #73787d;
     background: #e8ecf2;
-    display: inline-block;
+    float: left;
     box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
         5px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     margin: 5px;
 }
 
+output {
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
 
+.clock-card p {
+    text-align: center;
+    margin-top: 55px;
+}
 .clock-card:hover {
     color: black;
     box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.6),
@@ -65,4 +78,7 @@ body {
 }
 #clocks-container {
     margin-top: 50px;
+    display: inline;
+    justify-content: center;
+    align-items: center;
 }

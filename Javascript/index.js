@@ -1,3 +1,5 @@
+
+
 function Clock() {
     var liveClock = new Date();
 
@@ -20,15 +22,40 @@ function Clock() {
     var t = setTimeout(Clock, 500);
 }
 
-const btnAdd = document.getElementById("add-button");
-
 
 
 function addClock() {
     var newDiv = document.createElement("div");
+    var newOutput = document.createElement("output");
+    var newSpan = document.createElement("p");
 
+    
+    const tz = document.getElementById("timezones");
+
+    var zone = tz.options[tz.selectedIndex].value;
+    var zoneText = tz.options[tz.selectedIndex].text;
+    newSpan.innerHTML = zoneText;
+    newDiv.appendChild(newSpan);
+    newDiv.setAttribute("timezone", zone)
     newDiv.classList.add("clock-card");
 
-    var clocksDiv = document.getElementById("clocks-container");
+    const time = luxon.DateTime.now().setZone(zone);
+    newOutput.innerHTML =  time.toFormat("tt");
+    newDiv.appendChild(newOutput);
+    var clocksDiv = document.querySelector("div.clocks-container");
     clocksDiv.appendChild(newDiv);
+}
+
+
+
+function updateTime() {
+    const clocks = document.querySelectorAll("div.clock-card")
+    clocks.forEach(clock => {
+        const output = clock.querySelector("output");
+        var zone = clock.getAttribute("timezone");
+        const time = luxon.DateTime.now().setZone(zone)
+        output.innerHTML = time.toFormat("tt");
+    })
+
+    var t=setTimeout(updateTime, 500)
 }

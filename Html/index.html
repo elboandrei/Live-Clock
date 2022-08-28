@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/Javascript/index.js "></script>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
     <link rel="stylesheet" href="/CSS/index.css">
     <title>Live Clock</title>
 </head>
-<body>
+<body onload="updateTime()">
+    
+
     <div class="container">
-        <button id="add-button" onclick="addClock()">Add Clock</button><br>
-        <div id="clocks-container"></div>
+        <select name="timezones" id="timezones">
+            <option value="America/Los_Angeles">America/Los Angeles</option>
+            <option value="Asia/Tokyo">Asia/Tokyo</option>
+            <option value="America/Toronto">America/Toronto</option>
+        </select>
+        <button id="add-button" onclick="addClock()">Add Clock</button>
+        <div class="clocks-container"></div>
     </div>
 </body>
 </html>
