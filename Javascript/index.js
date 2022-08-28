@@ -16,9 +16,9 @@ function Clock() {
     minutes = ("0" + minutes).slice(-2);
     seconds = ("0" + seconds).slice(-2);
 
-    document.getElementById('clock').innerHTML = 
+    document.getElementById('liveClock').innerHTML = 
         hours + " : " + minutes + " : " + seconds + " " + amPm;
-
+    updateTime();
     var t = setTimeout(Clock, 500);
 }
 
@@ -44,6 +44,10 @@ function addClock() {
     newDiv.appendChild(newOutput);
     var clocksDiv = document.querySelector("div.clocks-container");
     clocksDiv.appendChild(newDiv);
+
+    newDiv.addEventListener("click", function() {
+        newDiv.remove()
+    })
 }
 
 
@@ -56,6 +60,4 @@ function updateTime() {
         const time = luxon.DateTime.now().setZone(zone)
         output.innerHTML = time.toFormat("tt");
     })
-
-    var t=setTimeout(updateTime, 500)
 }

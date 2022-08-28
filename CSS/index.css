@@ -20,10 +20,17 @@ body {
     width: 80%;
 }
 
+.buttons {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
 #add-button {
     background: #e8ecf2;
-    margin-bottom: 2em;
-    margin-left: 38.5%;
+    margin-left: 20px;
     color: #73787d;
     border-radius: 9999px;
     border: none;
@@ -55,7 +62,7 @@ body {
     box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
         5px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-    margin: 5px;
+    margin: 17px;
 }
 
 output {
@@ -76,9 +83,33 @@ output {
         inset -2px -2px 5px rgba(255, 255, 255, 0.6),
         inset 2px 2px 5px rgba(0, 0, 0, 0.30);
 }
-#clocks-container {
-    margin-top: 50px;
-    display: inline;
-    justify-content: center;
-    align-items: center;
+
+
+select {
+    text-align: center;
+    color: #73787d;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background: #e8ecf2;
+    cursor: pointer;
+
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+        5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.user-clock {
+    text-align: center;
+    margin-bottom: 2em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.8),
+        10px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#liveClock {
+    font-size: 8vh;
 }

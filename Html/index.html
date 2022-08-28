@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="/CSS/index.css">
     <title>Live Clock</title>
 </head>
-<body onload="updateTime()">
+<body onload="Clock()">
     
 
     <div class="container">
+        <div class="user-clock">
+            <h1> Live Clock </h1>
+            <div id="liveClock"></div>
+        </div>
+        <div class="buttons">
         <select name="timezones" id="timezones">
             <option value="America/Los_Angeles">America/Los Angeles</option>
             <option value="Asia/Tokyo">Asia/Tokyo</option>
             <option value="America/Toronto">America/Toronto</option>
         </select>
         <button id="add-button" onclick="addClock()">Add Clock</button>
+    </div>
         <div class="clocks-container"></div>
     </div>
 </body>
